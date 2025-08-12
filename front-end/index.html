@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PD-M4</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body class="bg-gray-700">
-  <aside class="sidebar w-[15%] h-screen bg-slate-800 text-white " >
-    <h2>pp design</h3>
-    <ul>
-      <li><a href="#">Artículo 1</a></li>
-      <li><a href="#">Artículo 2</a></li>
-      <li><a href="#">Artículo 3</a></li>
-    </ul>
-    <h1 id="text"></h1>
-  </aside>   
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PD-M4</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-700 min-h-screen flex">
+    <aside class="sidebar left-0 top-0 w-[15%] h-screen bg-slate-800 text-white p-4 space-y-4">
+      <h2 class="text-xl font-semibold">PD-M4 Joel R.</h2>
 
-  <main></main>
-  
-  <script src="./src/main.js"></script>
-</body>
+      <nav class="flex flex-col gap-1 text-sm">
+        <button data-view="balances" class="nav-btn text-left px-3 py-2 rounded-lg bg-slate-700/60 hover:bg-slate-700">
+          Balances
+        </button>
+        <button data-view="transactions" class="nav-btn text-left px-3 py-2 rounded-lg hover:bg-slate-700">
+          Transacciones
+        </button>
+        <button data-view="clients" class="nav-btn text-left px-3 py-2 rounded-lg hover:bg-slate-700">Clientes</button>
+      </nav>
+
+      <div class="mt-4 text-xs text-gray-300">
+        <div>Estado API: <span id="api-badge" class="text-yellow-300">OK</span></div>
+      </div>
+    </aside>
+
+    <main class="flex-1 ml-[15%]"></main>
+
+    <script src="./src/main.js"></script>
+  </body>
 </html>
